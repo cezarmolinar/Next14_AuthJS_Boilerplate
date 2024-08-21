@@ -1,8 +1,8 @@
-# Next14_Boilerplate
+# Next14_AuthJS_Boilerplate
 
-This is a template for creating applications using Next.js 14 (app directory).
+This is a template for creating applications using Next.js 14 (app directory) and Authentication by AuthJS.
 
-[Try it on CodeSandbox](https://githubbox.com/cezarmolinar/Next14_Boilerplate)
+[Try it on CodeSandbox](https://githubbox.com/cezarmolinar/Next14_AuthJS_Boilerplate)
 
 ## 🎯 Getting started
 
@@ -15,13 +15,13 @@ This is a template for creating applications using Next.js 14 (app directory).
 2. Using `create-next-app`
 
    ```bash
-   npx create-next-app -e https://github.com/cezarmolinar/Next14_Boilerplate my-project-name
+   npx create-next-app -e https://github.com/cezarmolinar/Next14_AuthJS_Boilerplate my-project-name
    ```
 
 3. Using `git clone`
 
    ```bash
-   git clone https://github.com/Skolaczk/next-starter my-project-name
+   git clone https://github.com/cezarmolinar/Next14_AuthJS_Boilerplate.git my-project-name
    ```
 
 ### 2. Install dependencies
@@ -32,7 +32,13 @@ You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 npm install
 ```
 
-### 4. Run the development server
+### 4. Initials configurations
+
+bla
+bla
+bla
+
+### 5. Run the development server
 
 ```bash
 npm run dev

@@ -3,16 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
+    "services:up": "docker compose -f ./docker-compose.yml up -d",
+    "services:stop": "docker compose -f ./docker-compose.yml stop",
+    "services:down": "docker compose -f ./docker-compose.yml down",
     "build": "next build",
     "start": "next start",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write ."
   },
   "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.429.0",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -31,6 +40,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "postcss": "^8",
     "prettier": "^3.3.3",
+    "prisma": "^5.18.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.4"
   }
