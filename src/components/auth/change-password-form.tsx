@@ -21,7 +21,7 @@ import { useSearchParams } from 'next/navigation'
 import AuthCard from './auth-card'
 import AuthFormMessage from './auth-form-message'
 import { NewPasswordSchema } from '@/lib/Schemas/userZodSchema'
-import { changePasswordAction } from '@/actions/password-reset/passwordActions'
+import { changePasswordAction } from '@/actions/change-password-actions'
 
 export const ChangePasswordForm = () => {
   const [error, setError] = useState<string | undefined>('')

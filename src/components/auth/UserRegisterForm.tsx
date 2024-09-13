@@ -16,7 +16,7 @@ import { Input } from '@/components/ui/input'
 import { useRouter } from 'next/navigation'
 import { useState, useTransition } from 'react'
 import { registerSchema } from '@/lib/Schemas/userZodSchema'
-import { UserRegisterAction } from '@/actions/auth/authAction'
+import { UserRegisterAction } from '@/actions/auth-action'
 import Link from 'next/link'
 import AuthCard from './auth-card'
 

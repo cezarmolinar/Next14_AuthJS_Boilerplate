@@ -29,6 +29,15 @@ export default {
           throw new Error('Incorrect password')
         }
 
+        const registeredUser = await prisma.user.findUnique({
+          where: { email: user?.email }
+        })
+        if (!registeredUser?.emailVerified)
+          throw new Error(
+            'Email não verificado. Ative sua conta clicando no link da mensagem enviado ao seu email'
+          )
+
+        ///////////////
         return user
       }
     })

@@ -19,7 +19,7 @@ import { LoaderIcon } from 'lucide-react'
 import Link from 'next/link'
 import AuthCard from './auth-card'
 import { ResetPasswordSchema } from '@/lib/Schemas/userZodSchema'
-import { resetPassword } from '@/actions/password-reset/passwordActions'
+import { resetPassword } from '@/actions/change-password-actions'
 import AuthFormMessage from './auth-form-message'
 
 export const ResetPasswordForm = () => {

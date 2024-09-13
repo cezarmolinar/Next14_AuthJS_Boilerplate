@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import UserSettingsForm from '@/components/auth/FormUserSettings'
+import UserSettingsForm from '@/components/auth/UserSettingForms'
 import { auth } from '@/lib/auth'
 import ControllerDB from '@/controller'
 

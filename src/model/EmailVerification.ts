@@ -1,4 +1,4 @@
-export interface ResetPasswordTokenModel {
+export interface EmailVerificationModel {
   id?: string
   email: string
   token: string

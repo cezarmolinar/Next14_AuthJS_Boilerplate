@@ -3,12 +3,17 @@ import UserGetByEmail from './user/userGetByEmail'
 import UserGetById from './user/userGetById'
 import UserGetFirst from './user/userGetFirst'
 import UserUpdatePassword from './user/userUpdatePassword'
+
 import passwordTokenGenerate from './passwordToken/tokenGenerate'
 import passwordTokenGetByEmail from './passwordToken/tokenGetByEmail'
 import passwordTokenGetByToken from './passwordToken/tokenGetByToken'
 import passwordTokenDelete from './passwordToken/tokenDelete'
 
-/// eslint-disable-next-line @typescript-eslint/no-extraneous-class
+import emailVerificationGetByEmail from './emailVerification/emailVerificationByEmail'
+import emailVerificationGetByToken from './emailVerification/emailVerificationByToken'
+import emailVerificationDelete from './emailVerification/emailVerificationDelete'
+import emailVerificationCreateToken from './emailVerification/emailVerificationCreateToken'
+
 export default class ControllerDB {
   static readonly user = {
     getFirst: UserGetFirst,
@@ -23,5 +28,12 @@ export default class ControllerDB {
     getByToken: passwordTokenGetByToken,
     generateToken: passwordTokenGenerate,
     delete: passwordTokenDelete
+  }
+
+  static readonly emailValidation = {
+    getByEmail: emailVerificationGetByEmail,
+    getByToken: emailVerificationGetByToken,
+    generateToken: emailVerificationCreateToken,
+    delete: emailVerificationDelete
   }
 }

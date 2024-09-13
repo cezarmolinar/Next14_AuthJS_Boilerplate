@@ -27,7 +27,7 @@ import {
 } from '../ui/card'
 import AuthFormMessage from './auth-form-message'
 import { UserSettingsSchema } from '@/lib/Schemas/userZodSchema'
-import { changeSettings } from '@/actions/settings/userSettingsAction'
+import { changeSettings } from '@/actions/user-settings-action'
 import { Separator } from '../ui/separator'
 
 interface Props {

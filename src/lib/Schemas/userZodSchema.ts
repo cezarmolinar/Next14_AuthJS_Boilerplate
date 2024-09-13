@@ -18,7 +18,7 @@ export const registerSchema = object({
     .min(6, 'A senha deve ter no mínimo 6 caracteres'),
   name: string({ required_error: 'Nome é obrigatório' })
     .min(1, 'Nome é obrigatório')
-    .min(6, 'A senha deve ter no mínimo 6 caracteres')
+    .min(6, 'O nome deve ter no mínimo 6 caracteres')
 })
 
 export const ResetPasswordSchema = object({

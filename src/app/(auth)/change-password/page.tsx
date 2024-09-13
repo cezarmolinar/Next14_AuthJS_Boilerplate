@@ -1,4 +1,4 @@
-import { ChangePasswordForm } from '@/components/auth/ChangePasswordForm'
+import { ChangePasswordForm } from '@/components/auth/change-password-form'
 import React, { Suspense } from 'react'
 
 const ChangePassword = () => {

@@ -1,24 +1,24 @@
 import { v4 as uuid } from 'uuid'
 import prisma from '@/lib/db'
-import { ResetPasswordToken } from '@/model/ResetPasswordToken'
+import { ResetPasswordTokenModel } from '@/model/ResetPasswordToken'
 
 export default class ResetTokenRepository {
   private static readonly db = prisma
 
-  static async findTokenByToken(token: string): Promise<ResetPasswordToken> {
+  static async findTokenByToken(token: string): Promise<ResetPasswordTokenModel> {
     const data = await this.db.resetPasswordToken.findUnique({
       where: { token }
     })
 
-    return data as ResetPasswordToken
+    return data as ResetPasswordTokenModel
   }
 
-  static async findTokenByEmail(email: string): Promise<ResetPasswordToken> {
+  static async findTokenByEmail(email: string): Promise<ResetPasswordTokenModel> {
     const data = await this.db.resetPasswordToken.findUnique({
       where: { email }
     })
 
-    return data as ResetPasswordToken
+    return data as ResetPasswordTokenModel
   }
 
   static async deleteToken(id: string): Promise<void> {
@@ -27,7 +27,7 @@ export default class ResetTokenRepository {
     })
   }
 
-  static async createToken(email: string): Promise<ResetPasswordToken> {
+  static async createToken(email: string): Promise<ResetPasswordTokenModel> {
     const token = uuid()
     const expires = new Date(new Date().getTime() + 2 * 60 * 60 * 1000) //two hours
 
